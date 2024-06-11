@@ -1,0 +1,152 @@
+
+
+{% block content %}
+<style>
+    body {
+        background-color: black;
+        color: gold;
+        font-family: Arial, sans-serif; /* Added for better font consistency */
+    }
+
+    /* Container */
+    .container {
+        margin-bottom: 2.75rem;
+        text-align: center; /* Center-aligning the container */
+    }
+
+    /* Form */
+    .form-group {
+        margin-bottom: 1.25rem;
+    }
+
+    .form-group label {
+        font-weight: 600;
+        margin-bottom: .5rem;
+        display: inline-block;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: .5rem 1rem;
+        border: 1px solid #ced4da;
+        border-radius: .25rem;
+        font-size: 1rem;
+    }
+
+    /* Checkbox */
+    .form-check {
+        margin-bottom: 1.25rem;
+    }
+
+    .form-check-input {
+        margin-right: .25rem;
+    }
+
+    .form-check-label {
+        font-size: .875rem;
+        color: #6c757d;
+    }
+
+    /* Button */
+    .btn-primary {
+        display: block;
+        width: 100%;
+        padding: .5rem 1rem;
+        background-color: gold;
+        border: none;
+        border-radius: .25rem;
+        font-size: 1rem;
+        color: black;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    .btn-primary:hover {
+        background-color: black;
+        color: gold;
+        transition: background-color 0.8s;
+    }
+
+    /* Text */
+    .font-size-sm {
+        font-size: .875rem;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    .text-underline {
+        text-decoration: underline;
+        color: gold;
+    }
+
+    .text-underline:hover {
+        color: blue;
+    }
+
+    /* Enhancements for h3 */
+    h3 {
+        font-size: 2rem; /* Slightly increased font size */
+        margin-bottom: 1.5rem; /* Adding margin for better spacing */
+    }
+
+</style>
+
+    <!-- LOGIN
+    ================================================== -->
+    <div class="container mb-11">
+        <div class="row gx-0">
+            <div class="col-md-7 col-xl-4 mx-auto">
+                <!-- Login -->
+                <h3 class="mb-6">Log In to Account!</h3>
+                
+                <!-- Form Login -->
+                <form class="mb-5" method = "post" action = "{%url 'dologin'%}">
+                    {% csrf_token %}
+                    <!-- Email -->
+                    <div class="form-group mb-5">
+                        <label for="modalSigninEmail1">
+                            Email
+                        </label>
+                        <input type="email" class="form-control" id="modalSigninEmail1" placeholder="creativelayers" name = "email">
+                    </div>
+
+                    <!-- Password -->
+                    <div class="form-group mb-5">
+                        <label for="modalSigninPassword1">
+                            Password
+                        </label>
+                        <input type="password" class="form-control" id="modalSigninPassword1" placeholder="**********" name ="password">
+                    </div>
+
+                    <div class="d-flex align-items-center mb-5 font-size-sm">
+                        <div class="form-check">
+                            <input class="form-check-input text-gray-800" type="checkbox" id="autoSizingCheck1">
+                            <label class="form-check-label text-gray-800" for="autoSizingCheck1">
+                                Remember me
+                            </label>
+                        </div>
+
+                        
+                    </div>
+
+                    <!-- Submit -->
+                    <button class="btn btn-block btn-primary" type="submit">
+                        LOGIN
+                    </button>
+                    <br>
+                    <br>
+                    
+                </form>
+
+                <!-- Text -->
+                <p class="mb-0 font-size-sm text-center">
+                    Don't have an account? <a class="text-underline" href="{% url 'register' %}">Sign up</a>
+                </p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+

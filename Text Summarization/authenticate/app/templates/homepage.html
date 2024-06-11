@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <style>
+       /* Resetting default margin and padding for better consistency */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling the body */
+body {
+    background-color: black; /* Light gray background */
+    font-family: Arial, sans-serif; /* Setting a fallback font */
+}
+
+/* Centering the main container */
+.main {
+    width: 80%; /* Adjust as needed */
+    margin: 50px auto; /* Centering the container */
+    text-align: center; /* Centering content inside the container */
+}
+
+h1 {
+    color: gold;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center; /* Ensure text is center-aligned */
+}
+
+/* Styling the image */
+img {
+    width: 100%; /* Making the image responsive */
+    max-width: 500px; /* Limiting maximum width */
+    display: block; /* Removing default inline display */
+    margin: 0 auto 20px; /* Centering the image with some bottom margin */
+}
+
+/* Styling the login link */
+a {
+    display: inline-block; /* Making the link a block element */
+    padding: 10px 20px; /* Adding padding for better clickability */
+    background-color: gold; /* Blue background color */
+    color: black; /* White text color */
+    text-decoration: none; /* Removing default underline */
+    border-radius: 5px; /* Adding some rounded corners */
+    transition: background-color 0.3s; /* Smooth transition on hover */
+}
+
+/* Styling the login link on hover */
+a:hover {
+    background-color: black; /* Darker blue background color */
+    color: gold
+}
+
+    </style>
+    <body>
+        <div class="main">
+            <h1>Text Summarization</h1>
+            <img src="https://globalowls.com/wp-content/uploads/2024/04/Delivers-Concise-Sentences.png">
+            <a href = "{% url 'dologin' %}">Login Here</a><br><br>
+            <a href = "{% url 'register' %}">Sign Up</a>
+        </div>
+        
+    </body>
+</html>
